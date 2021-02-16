@@ -1,24 +1,19 @@
 /* global process, __dirname */
 const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
-const isDevServer = process.argv.find((arg) => arg.includes('webpack-dev-server'));
+const isDevServer = process.argv.find((arg) => arg.includes('webpack serve'));
 
-const devtool = isDevServer ? "cheap-module-eval-source-map" : "source-map";
+const devtool = isDevServer ? "inline-source-map" : "source-map";
 
 module.exports = {
   devtool,
   entry: {
-    site: [
-      'babel-polyfill',
-      './app/index.js'
-    ],
-    repl: [
-      'babel-polyfill',
-      './app/repl.js'
-    ]
+    site: './app/index.js',
+    repl: './app/repl.js'
   },
   output: {
     path: path.join(__dirname, "docs"),
@@ -60,44 +55,61 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: true,
-                sourceMap: true
-              }
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
             }
-          ]
-        })
+          }
+        ]
       },
       { test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
-          {
-            loader: 'file-loader',
-            options: {
-              hash: 'sha512',
-              digest: 'hex',
-              name: '[hash].[ext]'
-            }
-          },
+          'file-loader',
           {
             loader: 'image-webpack-loader',
             options: {
-              bypassOnDebug: true
+              disable: true
             }
           }
         ]
       }
     ]
   },
+  optimization: {
+    minimize: !isDevServer,
+    minimizer: [
+      new TerserPlugin(),
+      new CssMinimizerPlugin()
+    ],
+    splitChunks: {
+      cacheGroups: {
+        shared: {
+          test: /[\\/]node_modules[\\/]/,
+          // cacheGroupKey here is `commons` as the key of the cacheGroup
+          name(module, chunks, cacheGroupKey) {
+            const moduleFileName = module.identifier().split('/').reduceRight(item => item);
+            const allChunksNames = chunks.map((item) => item.name).join('~');
+            return `${cacheGroupKey}-${allChunksNames}-${moduleFileName}`;
+          },
+          chunks: 'all'
+        }
+      }
+    }
+  },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: "shared",
-      filename: "shared.js"
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'templates/index.html',
+      chunks: ['site']
     }),
-    new UglifyJSPlugin({ sourceMap: true }),
-    new ExtractTextPlugin("[name].css")
+    new HtmlWebpackPlugin({
+      filename: 'repl.html',
+      template: 'templates/repl.html',
+      chunks: ['repl']
+    })
   ]
 };

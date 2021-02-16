@@ -26,16 +26,12 @@ Object {
 `;
 
 exports[`convert accepts plugins specified as a string renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <center>
     <h1>
       <img
         alt="Markdown Component Loader"
         id="logo"
-        src={Object {}}
       />
     </h1>
     <p>
@@ -51,7 +47,7 @@ exports[`convert accepts plugins specified as a string renders as expected withi
     </p>
   </center>
   <h3
-    id="welcomemdx"
+    id="welcome.mdx"
   >
     welcome.mdx
   </h3>
@@ -70,7 +66,7 @@ exports[`convert accepts plugins specified as a string renders as expected withi
     </code>
   </pre>
   <h3
-    id="appjsx"
+    id="app.jsx"
   >
     app.jsx
   </h3>
@@ -101,7 +97,7 @@ exports[`convert accepts plugins specified as a string renders as expected withi
     </code>
   </pre>
   <h3
-    id="rendered"
+    id="rendered%3A"
   >
     Rendered:
   </h3>
@@ -154,7 +150,7 @@ exports[`convert accepts plugins specified as a string renders as expected withi
     </code>
   </pre>
   <h2
-    id="what-else-can-it-do"
+    id="what-else-can-it-do%3F"
   >
     What else can it do?
   </h2>
@@ -244,7 +240,7 @@ exports[`convert accepts plugins specified as a string renders as expected withi
     </code>
   </pre>
   <h2
-    id="give-it-a-go"
+    id="give-it-a-go!"
   >
     Give it a go!
   </h2>
@@ -405,10 +401,7 @@ Object {
 `;
 
 exports[`convert doesn't trigger any kind of comment highlighting in highlights renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <pre>
     <code
       className="language-markdown"
@@ -443,10 +436,7 @@ Object {
 `;
 
 exports[`convert gracefully handles loose greater-than and less-than symbols renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <blockquote>
     <p>
       foo bar!
@@ -490,10 +480,7 @@ Object {
 `;
 
 exports[`convert handles interpolations within sentences which should be quoted renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <p>
     foo 
     Infinity
@@ -530,16 +517,12 @@ Object {
 `;
 
 exports[`convert happily renders its own homepage renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <center>
     <h1>
       <img
         alt="Markdown Component Loader"
         id="logo"
-        src={Object {}}
       />
     </h1>
     <p>
@@ -555,12 +538,11 @@ exports[`convert happily renders its own homepage renders as expected within Rea
     </p>
   </center>
   <h3
-    id="welcomemdx"
+    id="welcome.mdx"
   >
     <a
-      aria-hidden="true"
       className="header-anchor"
-      href="#welcomemdx"
+      href="#welcome.mdx"
     >
       🔗
     </a>
@@ -581,12 +563,11 @@ exports[`convert happily renders its own homepage renders as expected within Rea
     </code>
   </pre>
   <h3
-    id="appjsx"
+    id="app.jsx"
   >
     <a
-      aria-hidden="true"
       className="header-anchor"
-      href="#appjsx"
+      href="#app.jsx"
     >
       🔗
     </a>
@@ -619,12 +600,11 @@ exports[`convert happily renders its own homepage renders as expected within Rea
     </code>
   </pre>
   <h3
-    id="rendered"
+    id="rendered%3A"
   >
     <a
-      aria-hidden="true"
       className="header-anchor"
-      href="#rendered"
+      href="#rendered%3A"
     >
       🔗
     </a>
@@ -679,12 +659,11 @@ exports[`convert happily renders its own homepage renders as expected within Rea
     </code>
   </pre>
   <h2
-    id="what-else-can-it-do"
+    id="what-else-can-it-do%3F"
   >
     <a
-      aria-hidden="true"
       className="header-anchor"
-      href="#what-else-can-it-do"
+      href="#what-else-can-it-do%3F"
     >
       🔗
     </a>
@@ -776,12 +755,11 @@ exports[`convert happily renders its own homepage renders as expected within Rea
     </code>
   </pre>
   <h2
-    id="give-it-a-go"
+    id="give-it-a-go!"
   >
     <a
-      aria-hidden="true"
       className="header-anchor"
-      href="#give-it-a-go"
+      href="#give-it-a-go!"
     >
       🔗
     </a>
@@ -806,7 +784,6 @@ exports[`convert happily renders its own homepage renders as expected within Rea
     id="get-started"
   >
     <a
-      aria-hidden="true"
       className="header-anchor"
       href="#get-started"
     >
@@ -864,7 +841,17 @@ exports[`convert isn't confused by unmatched closing tags has the expected rende
     </div>"
 `;
 
-exports[`convert isn't confused by unmatched closing tags throws an error when passed to Babel 1`] = `"unknown: Adjacent JSX elements must be wrapped in an enclosing tag (17:6)"`;
+exports[`convert isn't confused by unmatched closing tags throws an error when passed to Babel 1`] = `
+"unknown: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (17:6)
+
+[0m [90m 15 | [39m      [33m<[39m[33mp[39m[33m>[39masdf[33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+[0m [90m 16 | [39m      [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 17 | [39m      [33m<[39m[33mp[39m[33m>[39mghjkl[33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+[0m [90m    | [39m      [31m[1m^[22m[39m[0m
+[0m [90m 18 | [39m    [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[0m [90m 19 | [39m  )[33m;[39m[0m
+[0m [90m 20 | [39m}[33m;[39m[0m"
+`;
 
 exports[`convert throws if a reserved static is specified 1`] = `"You can't supply a \`propTypes\` static! That name is reserved."`;
 
@@ -889,10 +876,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -1191,10 +1175,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -1299,10 +1280,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -1445,12 +1423,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -1473,10 +1446,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -1582,7 +1552,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -1600,7 +1570,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -1613,7 +1583,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -1645,7 +1615,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -1655,7 +1625,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -1687,7 +1657,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -1732,7 +1702,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -1754,7 +1724,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -1872,12 +1842,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -1982,10 +1949,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -2130,12 +2094,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -2158,10 +2117,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -2190,7 +2146,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -2208,7 +2164,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -2221,7 +2177,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -2253,7 +2209,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -2263,7 +2219,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -2295,7 +2251,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -2340,7 +2296,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -2362,7 +2318,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"markd
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -2480,12 +2436,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -2590,10 +2543,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -2738,12 +2688,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -2766,10 +2711,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -3068,10 +3010,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -3176,10 +3115,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -3322,12 +3258,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -3350,10 +3281,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -3459,7 +3387,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -3477,7 +3405,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -3490,7 +3418,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -3522,7 +3450,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -3532,7 +3460,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -3564,7 +3492,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -3609,7 +3537,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -3631,7 +3559,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -3749,12 +3677,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -3859,10 +3784,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -4007,12 +3929,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -4035,10 +3952,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -4067,7 +3981,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -4085,7 +3999,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -4098,7 +4012,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -4130,7 +4044,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -4140,7 +4054,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -4172,7 +4086,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -4217,7 +4131,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -4239,7 +4153,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -4357,12 +4271,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -4467,10 +4378,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -4615,12 +4523,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -4643,10 +4546,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -4945,10 +4845,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -5053,10 +4950,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -5199,12 +5093,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":false}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -5236,10 +5125,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -5547,10 +5433,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -5664,10 +5547,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -5819,12 +5699,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -5856,10 +5731,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -5965,7 +5837,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -5983,7 +5855,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -5996,7 +5868,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -6028,7 +5900,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -6038,7 +5910,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -6070,7 +5942,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -6115,7 +5987,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -6137,7 +6009,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -6264,12 +6136,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -6383,10 +6252,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -6540,12 +6406,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -6577,10 +6438,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -6609,7 +6467,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -6627,7 +6485,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -6640,7 +6498,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -6672,7 +6530,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -6682,7 +6540,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -6714,7 +6572,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -6759,7 +6617,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -6781,7 +6639,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":false,"passE
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -6908,12 +6766,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -7027,10 +6882,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -7184,12 +7036,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -7221,10 +7068,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -7532,10 +7376,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -7649,10 +7490,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -7804,12 +7642,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false,"passElementProps":true}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -7832,10 +7665,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -8134,10 +7964,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -8242,10 +8069,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":false}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -8388,12 +8212,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":false}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":false}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -8418,10 +8237,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -8722,10 +8538,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -8832,10 +8645,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -8980,12 +8790,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -9010,10 +8815,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -9119,7 +8921,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -9137,7 +8939,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -9150,7 +8952,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -9182,7 +8984,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -9192,7 +8994,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -9224,7 +9026,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -9269,7 +9071,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -9291,7 +9093,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -9411,12 +9213,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -9523,10 +9322,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -9673,12 +9469,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -9703,10 +9494,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -9735,7 +9523,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -9753,7 +9541,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -9766,7 +9554,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -9798,7 +9586,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -9808,7 +9596,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -9840,7 +9628,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -9885,7 +9673,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -9907,7 +9695,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdo
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -10027,12 +9815,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -10139,10 +9924,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -10289,12 +10071,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -10319,10 +10096,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -10623,10 +10397,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -10733,10 +10504,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -10881,12 +10649,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -10911,10 +10674,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -11020,7 +10780,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -11038,7 +10798,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -11051,7 +10811,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -11083,7 +10843,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -11093,7 +10853,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -11125,7 +10885,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -11170,7 +10930,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -11192,7 +10952,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -11312,12 +11072,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -11424,10 +11181,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -11574,12 +11328,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -11604,10 +11353,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -11636,7 +11382,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -11654,7 +11400,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -11667,7 +11413,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -11699,7 +11445,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -11709,7 +11455,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -11741,7 +11487,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -11786,7 +11532,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -11808,7 +11554,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -11928,12 +11674,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -12040,10 +11783,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -12190,12 +11930,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -12220,10 +11955,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -12524,10 +12256,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -12634,10 +12363,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -12782,12 +12508,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":false}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -12821,10 +12542,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -13134,10 +12852,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -13253,10 +12968,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -13410,12 +13122,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -13449,10 +13156,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -13558,7 +13262,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -13576,7 +13280,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -13589,7 +13293,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -13621,7 +13325,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -13631,7 +13335,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -13663,7 +13367,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -13708,7 +13412,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -13730,7 +13434,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -13859,12 +13563,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -13980,10 +13681,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -14139,12 +13837,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -14178,10 +13871,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -14210,7 +13900,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -14228,7 +13918,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -14241,7 +13931,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -14273,7 +13963,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -14283,7 +13973,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -14315,7 +14005,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -14360,7 +14050,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -14382,7 +14072,7 @@ exports[`convert with a config object of \`{"implicitlyImportReact":true,"passEl
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -14511,12 +14201,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -14632,10 +14319,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -14791,12 +14475,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -14830,10 +14509,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -15143,10 +14819,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -15262,10 +14935,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -15419,12 +15089,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true,"passElementProps":true}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -15449,10 +15114,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -15753,10 +15415,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -15863,10 +15522,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"implicitlyImportReact":true}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -16011,12 +15667,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"implicitlyImportReact":true}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"implicitlyImportReact":true}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"markdownItPlugins":"somenonsensevalue"}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -16039,10 +15690,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"markdownItPlugins":"somenonsensevalue"}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -16341,10 +15989,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"markdownItPlugins":"somenonsensevalue"}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -16449,10 +16094,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"markdownItPlugins":"somenonsensevalue"}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -16595,12 +16237,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -16623,10 +16260,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -16732,7 +16366,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"co
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -16750,7 +16384,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"co
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -16763,7 +16397,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"co
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -16795,7 +16429,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"co
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -16805,7 +16439,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"co
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -16837,7 +16471,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"co
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -16882,7 +16516,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"co
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -16904,7 +16538,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"co
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -17022,12 +16656,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -17132,10 +16763,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -17280,12 +16908,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -17308,10 +16931,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -17340,7 +16960,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for co
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -17358,7 +16978,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for co
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -17371,7 +16991,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for co
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -17403,7 +17023,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for co
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -17413,7 +17033,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for co
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -17445,7 +17065,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for co
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -17490,7 +17110,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for co
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -17512,7 +17132,7 @@ exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for co
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -17630,12 +17250,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -17740,10 +17357,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -17888,12 +17502,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -17916,10 +17525,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -18218,10 +17824,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -18326,10 +17929,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -18472,12 +18072,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -18500,10 +18095,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -18609,7 +18201,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -18627,7 +18219,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -18640,7 +18232,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -18672,7 +18264,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -18682,7 +18274,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -18714,7 +18306,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -18759,7 +18351,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -18781,7 +18373,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -18899,12 +18491,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -19009,10 +18598,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -19157,12 +18743,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -19185,10 +18766,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -19217,7 +18795,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -19235,7 +18813,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -19248,7 +18826,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -19280,7 +18858,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -19290,7 +18868,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -19322,7 +18900,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -19367,7 +18945,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -19389,7 +18967,7 @@ exports[`convert with a config object of \`{"passElementProps":false,"markdownIt
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -19507,12 +19085,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -19617,10 +19192,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -19765,12 +19337,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"passElementProps":false,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"passElementProps":false}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -19793,10 +19360,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -20095,10 +19659,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -20203,10 +19764,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":false}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -20349,12 +19907,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"passElementProps":false}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"passElementProps":false}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -20386,10 +19939,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -20697,10 +20247,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -20814,10 +20361,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -20969,12 +20513,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":"somenonsensevalue"}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -21006,10 +20545,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -21115,7 +20651,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -21133,7 +20669,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -21146,7 +20682,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -21178,7 +20714,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -21188,7 +20724,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -21220,7 +20756,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -21265,7 +20801,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -21287,7 +20823,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -21414,12 +20950,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -21533,10 +21066,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -21690,12 +21220,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null,[null,{"containerClass":"my-container-class"}]]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null]}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -21727,10 +21252,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null]}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id="test-document"
   >
@@ -21759,7 +21281,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </li>
   </ul>
   <h2
-    id="heres-a-couple-of-hyperlinks"
+    id="here's-a-couple-of-hyperlinks"
   >
     Here's a couple of hyperlinks
   </h2>
@@ -21777,7 +21299,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </a>
   </p>
   <h2
-    id="heres-a-code-snippet-with-no-interpolations"
+    id="here's-a-code-snippet-with-no-interpolations"
   >
     Here's a code snippet with no interpolations
   </h2>
@@ -21790,7 +21312,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-things-which-shouldnt-be-treated-as-interpolations"
+    id="here's-a-code-snippet-with-things-which-shouldn't-be-treated-as-interpolations"
   >
     Here's a code snippet with things which shouldn't be treated as interpolations
   </h2>
@@ -21822,7 +21344,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </code>
   </pre>
   <h2
-    id="heres-a-paragraph-with-a-simple-interpolation"
+    id="here's-a-paragraph-with-a-simple-interpolation"
   >
     Here's a paragraph with a simple interpolation
   </h2>
@@ -21832,7 +21354,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
      props being supplied to this component.
   </p>
   <h2
-    id="heres-a-code-snippet-with-a-simple-interpolation"
+    id="here's-a-code-snippet-with-a-simple-interpolation"
   >
     Here's a code snippet with a simple interpolation
   </h2>
@@ -21864,7 +21386,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </code>
   </pre>
   <h2
-    id="heres-a-code-snippet-with-arrows-in-it"
+    id="here's-a-code-snippet-with-arrows-in-it"
   >
     Here's a code snippet with arrows in it
   </h2>
@@ -21909,7 +21431,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-code-snippet"
+    id="here's-an-unhinted-code-snippet"
   >
     Here's an unhinted code snippet
   </h2>
@@ -21931,7 +21453,7 @@ exports[`convert with a config object of \`{"passElementProps":true,"markdownItP
     </code>
   </pre>
   <h2
-    id="heres-an-unhinted-snippet-with-no-discernible-language"
+    id="here's-an-unhinted-snippet-with-no-discernible-language"
   >
     Here's an unhinted snippet with no discernible language
   </h2>
@@ -22058,12 +21580,9 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null]}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
-    id="markdown-template-with-imports-static-attributes-and-interpolations"
+    id="markdown-template-with-imports%2C-static-attributes-and-interpolations"
   >
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -22177,10 +21696,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null]}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1
     id=""
   >
@@ -22334,12 +21850,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"passElementProps":true,"markdownItPlugins":[null]}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{"passElementProps":true}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -22371,10 +21882,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -22682,10 +22190,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -22799,10 +22304,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{"passElementProps":true}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -22954,12 +22456,7 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{"passElementProps":true}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{"passElementProps":true}\` for component example 4 renders as expected within React 2`] = `<div />`;
 
 exports[`convert with a config object of \`{}\` for component example 1 has the expected preamble 1`] = `
 "
@@ -22982,10 +22479,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{}\` for component example 1 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Test Document
   </h1>
@@ -23284,10 +22778,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{}\` for component example 2 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     Markdown template with imports, static attributes and interpolations
   </h1>
@@ -23392,10 +22883,7 @@ Object {
 `;
 
 exports[`convert with a config object of \`{}\` for component example 3 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
->
+<div>
   <h1>
     <img
       alt="Markdown Component Loader"
@@ -23538,9 +23026,4 @@ Object {
 }
 `;
 
-exports[`convert with a config object of \`{}\` for component example 4 renders as expected within React 2`] = `
-<div
-  className={undefined}
-  style={undefined}
-/>
-`;
+exports[`convert with a config object of \`{}\` for component example 4 renders as expected within React 2`] = `<div />`;
